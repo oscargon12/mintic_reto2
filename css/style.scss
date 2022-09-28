@@ -1,6 +1,23 @@
 //Color
 $primary: #3949AB;
 
+//primary Font
+$font-primary: 'Lato', sans-serif;
+
+*{
+    font-family: $font-primary;
+}
+
 .txt-primary{
     color: $primary;
+}
+
+.fixed-navbar{
+    position: fixed;
+    height: 100vh;
+    width: 220px;
+
+    .nav-item:hover{
+        background-color: #ECEFF1;
+    }
 }

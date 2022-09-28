@@ -1,4 +1,18 @@
+* {
+  font-family: "Lato", sans-serif;
+}
+
 .txt-primary {
   color: #3949AB;
+}
+
+.fixed-navbar {
+  position: fixed;
+  height: 100vh;
+  width: 220px;
+}
+
+.fixed-navbar .nav-item:hover {
+  background-color: #ECEFF1;
 }
 /*# sourceMappingURL=style.css.map */

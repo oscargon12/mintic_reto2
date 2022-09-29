@@ -2,37 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous"/>
 
     <!-- fuente -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet"/>
 
     <!-- iconos -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"/>
+
+    <!-- Estilos -->
     <link href="css/style.css" rel="stylesheet" />
-    <title>Hello, world!</title>
+    <title>Reto 2</title>
   </head>
   <body>
     <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 py-2">
       <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">
-        <i class="bi bi-server"></i> MyProducts</a
-      >
+        <i class="bi bi-server"></i> MyProducts</a>
       <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
           <p class="text-white mb-0">Bienvenido</p>
@@ -44,8 +32,7 @@
       <div class="row">
         <nav
           id="sidebarMenu"
-          class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse fixed-navbar shadow"
-        >
+          class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse fixed-navbar shadow">
           <div class="sidebar-sticky pt-3">
             <p class="my-2 text-muted">Administración de tablas</p>
             <ul class="nav flex-column">
@@ -69,19 +56,71 @@
         </nav>
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-          <div class="card mt-5">
+          <section class="card mt-5">
             <div class="card-body">
               Bienvenido a la solución de administración de productos y clientes
             </div>
-          </div>
+          </section>
           
           <!-- Formulario de productos -->
-          <div class="card mt-5">
-            <div class="card-body">
-              Bienvenido a la solución de administración de productos y clientes
+          <section class="row mt-4">
+            <div class="col-12 text-center">
+              <h4 class="text-info">Gestión de la tabla Disfraces</h4>
             </div>
-          </div>
-          </div>
+          </section>
+          <section class="col-12">
+            <div class="card">
+              <div class="card-body">
+                <article class="row mt-3 mb-4">
+                  <div class="col-3">
+                    <small>Informacion tabla Disfraces:</small>
+                  </div>
+                  <div class="col-9 d-flex justify-content-end">
+                    <button type="button" class="btn btn-sm btn-warning ml-2 px-3"> <i class="bi bi-x"></i> Limpiar datos</button>
+                    <button type="button" class="btn btn-sm btn-dark ml-2 px-3"> <i class="bi bi-list-ul"></i> Mostrar todos</button>
+                    <button type="button" class="btn btn-sm btn-info ml-2 px-3"> <i class="bi bi-arrow-clockwise"></i> Actualizar registro</button>
+                  </div>
+                </article>
+                <article class="row mt-3 mb-4 d-flex align-items-end">
+                  <div class="col-12 col-md-9">
+                    <label for="idDisfraz" class="text-muted mb-0"> <small> Id de disfraz </small></label>
+                    <input class="form-control form-control-sm" id="idDisfraz" type="text" placeholder="Ingresa un id">
+                  </div>
+                  <div class="col-12 col-md-3 mt-2">
+                    <button type="button" class="btn btn-block btn-sm btn-dark"><i class="bi bi-search mr-2"></i> Buscar ID</button>
+                  </div>
+                </article>
+                <div class="dropdown-divider"></div>
+                <article class="row mt-3">
+                  <div class="col-12 col-md-6">
+                    <label for="nombre" class="text-muted mb-0"> <small> Nombre </small></label>
+                    <input class="form-control form-control-sm" id="nombre" type="text" placeholder="Ingresa un nombre">
+                  </div>
+                  <div class="col-12 col-md-3">
+                    <label for="fecha" class="text-muted mb-0"> <small> Fecha </small></label>
+                    <input class="form-control form-control-sm" id="fecha" type="text" placeholder="Ingresa una fecha">
+                  </div>
+                  <div class="col-12 col-md-3">
+                    <label for="precio" class="text-muted mb-0"> <small> precio </small></label>
+                    <input class="form-control form-control-sm" id="precio" type="text" placeholder="Ingresa un precio">
+                  </div>
+                </article>
+                <article class="row mt-3">
+                  <div class="col-12">
+                    <label for="descripcion" class="text-muted mb-0"> <small> Descripción </small></label>
+                    <input class="form-control form-control-sm" id="descripcion" type="text" placeholder="Ingresa una descripción">
+                  </div>
+                  <div class="col-12 mt-3">
+                    <label for="usuario" class="text-muted mb-0"> <small> Usuario </small></label>
+                    <input class="form-control form-control-sm" id="usuario" type="text" placeholder="Ingresa un usuario">
+                  </div>
+                  <div class="col-12 col-md-3 mt-3 d-flex justify-content-end">
+                    <button type="button" class="btn btn-block btn-sm btn-info"> <i class="bi bi-check-lg"></i> Agregar registro</button>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
         </main>
       </div>
     </div>
@@ -89,12 +128,10 @@
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
   </body>
 </html>

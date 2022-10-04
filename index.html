@@ -123,10 +123,10 @@
                   <div class="col-12 col-md-6 pr-0">
                     <label for="id" class="text-muted mb-0">
                       <small> Id de disfraz </small></label>
-                    <input type="number" class="form-control form-control-sm" id="id" placeholder="Ingresa un id" />
+                    <input class="form-control form-control-sm" type="number" id="codigo" placeholder="Ingresa un ID"/>
                   </div>
                   <div class="col-12 col-md-6 mt-2">
-                    <button type="button" class="btn btn-block btn-sm btn-dark">
+                    <button type="button" class="btn btn-block btn-sm btn-dark" id="btnBuscarID" onclick="consultaID('#id')">
                       <i class="bi bi-search mr-2"></i> Buscar ID
                     </button>
                   </div>
@@ -186,63 +186,15 @@
               <div class="card-body">
                 <article class="row my-1">
                   <div class="col-12">
-                    <table class="table table-sm mb-0">
-                      <thead class="thead-dark">
-                        <tr>
-                          <th scope="col"> <small> Id </small> </th>
-                          <th scope="col"> <small> Brand </small> </th>
-                          <th scope="col"> <small> Model </small> </th>
-                          <th scope="col"> <small> Category </small> </th>
-                          <th scope="col"> <small> Name </small> </th>
-                          <th scope="col"> <small> Actions </small> </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row"> <small> 1 </small></th>
-                          <td> <small> Mark</small> </td>
-                          <td> <small> Otto</small> </td>
-                          <td> <small> @mdo</small> </td>
-                          <td> <small> @mdo</small> </td>
-                          <td>
-                            <button type="button" class="btn btn-outline-danger px-1 py-0">
-                              <i class="bi bi-trash-fill"></i>
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row"> <small> 1 </small></th>
-                          <td> <small> Mark</small> </td>
-                          <td> <small> Otto</small> </td>
-                          <td> <small> @mdo</small> </td>
-                          <td> <small> @mdo</small> </td>
-                          <td>
-                            <button type="button" class="btn btn-outline-danger px-1 py-0">
-                              <i class="bi bi-trash-fill"></i>
-                            </button>
-                          </td>
-                        </tr>
-
-                      </tbody>
-                    </table>
+                    <div class="card-body px-0" id="result"></div>
                   </div>
                 </article>
               </div>
             </div>
           </section>
-
           <div class="card">
-            <div class="card-body" id="result">
-            
-            </div>
           </div>
         </div>
-
-<!--         <section>
-          <div class="card">
-            <div class="card-body">This is some text within a card body.</div>
-          </div>
-        </section> -->
       </main>
     </div>
   </div>
@@ -253,10 +205,6 @@
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous">
-  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
     crossorigin="anonymous">

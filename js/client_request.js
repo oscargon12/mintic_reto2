@@ -1,19 +1,17 @@
 //URL oracle
-let templateUrl = 'https://g30a00238f82593-bdreto1.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/costume/costume';
+let templateUrl = 'https://g30a00238f82593-bdreto1.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/client/client';
 
 //Limpiar formulario
 function limpiar_formulario(){
 		let campoTextoID = document.getElementById("codigo");
-		let campoTextoNombre = document.getElementById("costumeName");
-		let campoTextoCat = document.getElementById("category");
-		let campoTextoModelo = document.getElementById("model");
-		let campoTextoMarca = document.getElementById("brand");
+		let campoTextoNombre = document.getElementById("clientName");
+		let campoTextoEmail = document.getElementById("email");
+		let campoTextoAge = document.getElementById("age");
 		
 		campoTextoID.value = "";
 		campoTextoNombre.value = "";
-		campoTextoCat.value = "";
-		campoTextoModelo.value = "";
-		campoTextoMarca.value = "";
+		campoTextoEmail.value = "";
+		campoTextoAge.value = "";
 }
 
 //Get a todos los registros
@@ -36,17 +34,15 @@ function getAll(){
             //crearRespuestaGastos(respuesta.items)
 			
 			$("#result").empty();
-			table = "<div> <table border='1' class='w-100'> <tr class='bg-dark text-light'> <th>Id</th> <th>Marca</th> <th>modelo</th> <th>Id Categoria</th> <th>Nombre</th> <th>Acciones</th> </tr> </tr>"
+			table = "<div> <table border='1' class='w-100'> <tr class='bg-dark text-light'> <th>Id</th> <th>Nombre</th> <th>Email</th> <th>Edad</th> <th>Acciones</th> </tr> </tr>"
 			rows = ""
 			for (i = 0; i < json.items.length; i++){
 				rows += "<tr>";
 				rows += '<td class="py-1"> <small>' + json.items[i].id + '</small> </td>'	
-                rows += '<td class="py-1"> <small>' + json.items[i].brand + '</small> </td>'	
-                rows += '<td class="py-1"> <small>' + json.items[i].model + '</small> </td>'	
-                rows += '<td class="py-1"> <small>' + json.items[i].category + '</small> </td>'	
-                rows += '<td class="py-1"> <small>' + json.items[i].name +  '</small> </td>'
+                rows += '<td class="py-1"> <small>' + json.items[i].name + '</small> </td>'	
+                rows += '<td class="py-1"> <small>' + json.items[i].email + '</small> </td>'	
+                rows += '<td class="py-1"> <small>' + json.items[i].age + '</small> </td>'	
 				rows += "<td class='d-flex justify-content-center py-1'> <button type='button' class='btn btn-outline-danger px-1 py-0' onclick='borrar_registro("+json.items[i].id+")'> <i class='bi bi-trash-fill'> </i> </button>";//se agrega el boton y este tiene la funcion borrar registro:
-				//rows += "<td> <button onclick='borrar_registro("+json.items[i].id+")'>Borrar</button>";//se agrega el boton y este tiene la funcion borrar registro:
 				rows += "</tr>";
 			}
 			rows += "</table>"
@@ -72,7 +68,7 @@ function consultaID(id){
 	console.log(campoTextoID.value);
 
 	$.ajax({
-		url: 'https://g30a00238f82593-bdreto1.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/costume/costume/:id' + id.value,
+		url: 'https://g30a00238f82593-bdreto1.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/client/client/:id' + campoTextoID.value,
 		type: 'GET',
 		dataType: 'json',
 		success: function(json){
@@ -114,10 +110,9 @@ function guardarInformacion(){
         url: templateUrl,
 		
 		data:{
-			brand: $("#brand").val(),			
-			model: $("#model").val(),
-			category_id: $("#category").val(),
-			name: $("#costumeName").val(),
+			name: $("#clientName").val(),
+			email: $("#email").val(),			
+			age: $("#age").val(),
 		},
 		
 		type: 'POST',
